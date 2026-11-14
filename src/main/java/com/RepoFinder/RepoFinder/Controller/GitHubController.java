@@ -33,12 +33,15 @@ public class GitHubController {
     public List<GithubEntity> getRepositories(
             @RequestParam(required = false) String language,
             @RequestParam(required = false) Integer minStars,
+            @RequestParam(required = false) Integer minForks,
             @RequestParam(defaultValue = "stars") String sort) {
 
         return githubService.getRepositories(
                 language,
                 minStars,
+                minForks,
                 sort
         );
     }
+
 }

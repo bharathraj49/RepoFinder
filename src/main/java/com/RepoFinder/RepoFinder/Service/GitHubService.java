@@ -16,6 +16,8 @@ public interface GitHubService {
     List<GithubEntity> getRepositories(
             String language,
             Integer minStars,
+            Integer minForks,
             String sort
     );
+
 }
